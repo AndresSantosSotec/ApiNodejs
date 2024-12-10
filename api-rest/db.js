@@ -9,11 +9,11 @@ const config = {
         trustServerCertificate: true, // Permite certificados autofirmados
     },
     authentication: {
-        type: 'ntlm', // Especifica la autenticación de Windows
+        type: 'ntlm', // Autenticación de Windows
         options: {
-            domain: process.env.DB_DOMAIN, // Dominio del usuario de Windows
-            userName: process.env.DB_USER, // Nombre de usuario
-            password: process.env.DB_PASSWORD, // Contraseña del usuario
+            domain: process.env.DB_DOMAIN, // Dominio del usuario
+            userName: process.env.DB_USER, // Usuario
+            password: process.env.DB_PASSWORD || '', // Contraseña vacía si no hay
         },
     },
 };
